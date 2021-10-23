@@ -21,7 +21,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Provide any contribution guidelines.',
+        message: 'Provide any contributers',
         name: 'contribution',
     },
     {
@@ -33,7 +33,7 @@ const questions = [
         type: 'checkbox',
         message: 'Chose license',
         name: 'license',
-        choices: ['Apache License 2.0', 'MIT LIcense', 'GNU General Public License v3.0']
+        choices: ['Apache License 2.0', 'MIT License', 'GNU General Public License v3.0']
     },
     {
         type: 'input',
