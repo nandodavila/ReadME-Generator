@@ -4,18 +4,19 @@ function renderLicenseBadge(license) {
   if (license == "") { 
     return " "
   } else {
+    const addedBadges = []
     if (license.includes("MIT License")) {
       const mitBadge = '[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)'
-      return mitBadge;
+      addedBadges.push(mitBadge);
     }
     if (license.includes('Apache License 2.0')) {
       const apacheBadge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-      return apacheBadge;
+      addedBadges.push(apacheBadge);
     }
     if (license.includes('GNU General Public License v3.0')) {
       const gnuBadge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
-      return gnuBadge;
-  } return;
+      addedBadges.push(gnuBadge);
+  } return addedBadges; 
 }
 }
 
