@@ -4,14 +4,20 @@ function renderLicenseBadge(license) {
   if (license == "") { 
     return " "
   } else {
-    if (license === "MIT License") {
-      return `[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)`
+    console.log(license)
+    if (license.includes("MIT License")) {
+      const mitBadge = '[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)'
+      return mitBadge;
     }
-  }
-
-  
-// [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-// [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0) 
+    if (license.includes('Apache License 2.0')) {
+      const apacheBadge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+      return apacheBadge;
+    }
+    if (license.includes('GNU General Public License v3.0')) {
+      const gnuBadge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+      return gnuBadge;
+  } return;
+}
 }
 
 
@@ -37,11 +43,11 @@ function generateMarkdown(data) {
   return `
   # **${data.title}**
 
-  ${renderLicenseBadge}
+  ${renderLicenseBadge(data.license)}
 
   ### Table of Contents
   **[Discription](#discription)**<br>
-  ${renderLicenseLink}
+  ${renderLicenseLink(data.license)}
   **[Usage](#usage)**<br>
   **[License](#license)**<br>
   **[Contributing](#contributing)**<br>
