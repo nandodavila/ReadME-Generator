@@ -4,7 +4,6 @@ function renderLicenseBadge(license) {
   if (license == "") { 
     return " "
   } else {
-    console.log(license)
     if (license.includes("MIT License")) {
       const mitBadge = '[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)'
       return mitBadge;
@@ -74,11 +73,14 @@ function generateMarkdown(data) {
 
   ## Test
  
-  ${data.test}
+  ${data.tests}
 
   ## Questions
   github: ${data.username}
   email: ${data.email}
+
+  ## Example
+  ![screenshot](utils/images/TestReadMe.PNG)
 
 
   

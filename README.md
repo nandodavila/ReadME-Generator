@@ -15,14 +15,14 @@
 
   ## Discription 
 
-  This App will make making READme.md's easier, and quicker. By asking you basic questions about your application
+  This app will make making READme.MDs easier, and quicker. It will ask you basic question about you application, and fill in your read me when you are done
 
   ## Installation
   npm i
 
   ## Usage
 
-  Just type node index in your console, and let it do all the work for you 
+  Just type node index in your console and let it do the rest
 
   ## Contributing
 
@@ -32,11 +32,14 @@
 
   ## Test
  
-  undefined
+  
 
   ## Questions
   github: nandodavila
   email: nandodavila94@gmail.com
+
+  ## Example
+  ![screenshot](utils/images/TestReadMe.PNG)
 
 
   
